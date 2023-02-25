@@ -79,7 +79,12 @@ def raices(*args):
                     raiz_2 = (-3*q)/(2*p)
                     raices = [raiz_1,raiz_2]
             else:
-                
+                dsc=-1*dsc
+                u=cb((complex(-q,+sq(dsc)))/2)
+                v=cb((complex(-q,-sq(dsc)))/2)
+                w_0=1
+                w_1=(-1/2)+complex()
+                w_2=
 
 
 
