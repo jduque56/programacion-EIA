@@ -61,13 +61,26 @@ def raices(*args):
         case 4:
             args = [args[0]/args[0],args[1]/args[0],args[2]/args[0],args[3]/args[1]]
             p = float(args[2]-(args[1]**2 / 3))
-            q = float(args[3]-((args[1]*args[2])/3)+((2 * args[1]**3)/27))
-            dsc = (q**2 / 4.0) + (p**3 / 27.0)
-            alp = cb((-1.0*q/2) + sq(dsc))
-            bt = cb((-1.0*q/2) - sq(dsc))
-            raiz_1 = 
-            raiz_2 = 
-            raiz_3 = 
+            q = float((2*args[1]**2)/27 - (args[1]*args[2])/3 + args[3])
+            dsc = q**2 + (4 * p**3)/27
+            if dsc > 0:
+                u = cb((-1*p+sq(dsc))/2)
+                v = cb((-1*q-sq(dsc))/2)
+                raiz_1 = u+v
+                raiz_2 = complex(-(raiz_1/2),(cb(3)*u-v)/2)
+                raiz_3 = complex(-(raiz_1/2),-(cb(3)*u-v)/2)
+                raices = [raiz_1,raiz_2,raiz_3]
+            elif dsc == 0:
+                if p == 0 and q == 0:
+                    raices = ["0","0","0"]
+                    return raices
+                else: 
+                    raiz_1 = 3*q/p
+                    raiz_2 = (-3*q)/(2*p)
+                    raices = [raiz_1,raiz_2]
+            else:
+                
+
 
 
 
