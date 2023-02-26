@@ -82,9 +82,11 @@ def raices(*args):
                 dsc=-1*dsc
                 u=cb((complex(-q,+sq(dsc)))/2)
                 v=cb((complex(-q,-sq(dsc)))/2)
-                w_0=1
-                w_1=(-1/2)+complex()
-                w_2=
+                w_1=complex(-1/2,sq(3)/2)
+                w_2=complex(-1/2,-sq(3)/2)
+                raiz_1=u+v
+                raiz_2=w_1*u + (w_1**2)*v
+                raiz_3=w_2*u + (w_2**2)*v
 
 
 
